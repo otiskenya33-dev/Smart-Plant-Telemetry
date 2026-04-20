@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>SmartPlant Data Display</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+
+<div class="container" id="app">
+  <div class="header">
+    <h1>📡 SmartPlant Telemetry</h1>
+    <p>Live sensor data · Auto‑refresh every 10 minutes</p>
+    <div class="channel-badge" id="channelIdBadge">Channel: -- | Otis</div>
+  </div>
+
+  <div class="content">
+    <!-- Status bar -->
+    <div class="status-card">
+      <div class="refresh-info">
+        <span class="last-update" id="lastUpdateText">⏳ Last update: --</span>
+        <span class="next-refresh" id="nextRefreshText">🔄 Next refresh in --</span>
+      </div>
+      <button class="manual-btn" id="refreshNowBtn">⟳ Refresh now</button>
+    </div>
+
+    <!-- Dynamic data grid will be injected here -->
+    <div id="dataContainer" class="data-grid">
+      <div class="loading"><div class="spinner"></div> Loading data...</div>
+    </div>
+
+    <!-- Entry ID info -->
+    <div class="entry-id" id="entryInfo">
+      Waiting for data...
+    </div>
+  </div>
+  <footer>
+    Data provided by ThingSpeak API · Updates every 10 minutes · Created by : Otieno Harry
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
